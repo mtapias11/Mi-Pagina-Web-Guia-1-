@@ -1,0 +1,131 @@
+<html lang="es"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi Página Web Guia 1 </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+   <header style="background-color: #f5097f8a; color: white;" class="text-center p-4">
+    <h1>Bienvenidos a Mi Página Web</h1>
+    <nav>
+      <a href="#formulario" class="text-white me-6">Formulario</a>
+      <a href="#tabla" class="text-white me-3">Tabla</a>
+      <a href="#Linea de Tiempo" class="text-white me-3">Linea de Tiempo<a>
+      <a href="#Audio" class="text-white me-3">Audio</a>
+        <a href="#Video" class="text-white me-3">Video</a>
+
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <section>
+      <h2>Actividad 2.</h2>
+      <p>Este proyecto consiste en el desarrollo de una página web que permite implementar diversos elementos de HTML5 y CSS3, aplicando los principios de diseño semántico y adaptativo.</p>
+      <a href="https://getbootstrap.com/" target="_blank">Visita Bootstrap para saber más </a>
+    </section>
+      
+    <section id="multimedia" class="my-5">
+      <h2>Linea de Tiempo</h2>
+      <img src="Imagenes de pagina/Linea de tiempo HTML y CSS.png" alt="imagenes de pagina" class="img-fluid mb-3">
+      <h2>Explicación del Proyecto</h2>
+      <audio controls="">
+        <source src="Sonido/audiocleaner_20250927_102727_translator.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+      </audio>
+        <h2 class="mt-4">Video de Introducción</h2>
+      <video controls="" width="100%" class="mt-3">
+        <source src="Video/Videointroduccion.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+
+    <section id="tabla" class="my-5">
+      <h2>Tabla Comparativa</h2>
+      <table class="table table-bordered table-striped">
+        <thead class="table-info">
+          <tr>
+            <th>Característica</th>
+            <th>Función principal</th>
+            <th>Tipo de lenguaje</th>
+            <th>Sintaxis básica</th>
+            <th>Ubicación en el documento</th>
+            <th>Relación</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML (HyperText Markup Language)</td>
+            <td>Estructura y contenido de la página web</td>
+            <td>Lenguaje de marcado</td>
+            <td> < h1 >, < p >, < img >, < table >, < form > </td>
+            <td>Dentro del archivo .html</td>
+            <td>Es la base sobre la que CSS y Bootstrap aplican estilos y diseño. Sin HTML, no hay elementos que estilizar.</td>
+          
+          </tr>
+          <tr>
+            <td>CSS (Cascading Style Sheets)</td>
+            <td>Estilo y presentación visual de la página web</td>
+            <td>Lenguaje de estilos</td>
+            <td>color: red;, font-size: 16px;, margin: 10px;</td>
+            <td>Dentro del archivo .css o en la sección < style > del HTML</td>
+            <td>Se usa para personalizar la apariencia de los elementos HTML. Bootstrap está construido sobre CSS.</td>
+          </tr>
+            <td>Framework que facilita el diseño responsivo y estilizado</td>
+            <td>Biblioteca basada en CSS y JavaScript</td>
+            <td>Combinación de clases CSS predefinidas y componentes que te permiten construir páginas web rápidas, responsivas y estilizadas sin tener que escribir mucho código desde cero.</td>
+            <td>class="btn btn-primary", class="container"</td>
+            <td>Se incluye mediante <link> a la CDN o archivo local</td>
+            <td>Bootstrap usa clases CSS que se aplican a elementos HTML para darles estilo y funcionalidad sin escribir mucho código.</td>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="formulario" class="my-5">
+      <h2>Formulario de Contacto</h2>
+      <form class="row g-3 needs-validation" novalidate="">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" required="" autofocus="" autocomplete="name">
+          <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="email" name="email" required="" autocomplete="email">
+          <div class="invalid-feedback">Correo inválido.</div>
+        </div>
+        <div class="col-md-6">
+          <label for="fecha" class="form-label">Fecha de Nacimiento</label>
+          <input type="date" class="form-control" id="fecha" name="fecha" required="">
+          <div class="invalid-feedback">Selecciona una fecha válida.</div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-success" type="submit">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer style="background-color: #f5097f8a; color: white;" class="text-center p-3">
+    <p>© 2025 Mi Página Web Guia 1. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Validación Bootstrap
+    (() => {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script>
+
+
+</body></html
